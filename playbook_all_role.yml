@@ -1,0 +1,11 @@
+---
+- hosts: lab_ansible
+  become: yes
+  gather_facts: yes
+
+  roles:
+    - config_directories
+
+  vars_files:
+    - config_directories/vars/main.yml
+      

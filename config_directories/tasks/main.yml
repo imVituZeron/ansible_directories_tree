@@ -1,0 +1,22 @@
+---
+  - name: CREATING DIRECTORIES TREE in Debian
+    file:
+      path: "{{ item }}"
+      state: directory
+    with_items:
+    - "{{ somes_mts.mt_1_r }}"
+    - "{{ somes_mts.mt_1_l }}"
+    - "{{ somes_mts.mt_2_r }}"
+    - "{{ somes_mts.mt_2_l }}"
+    when: (ansible_facts['os_family'] == 'Debian')
+
+  - name: CREATING DIRECTORIES TREE in centOS
+    file:
+      path: "{{ item }}"
+      state: directory
+    with_items:
+    - "{{ somes_mts.mt_3_r }}"
+    - "{{ somes_mts.mt_3_l }}"
+    - "{{ somes_mts.mt_4_r }}"
+    - "{{ somes_mts.mt_4_l }}"
+    when: (ansible_facts['os_family'] == 'RedHat')

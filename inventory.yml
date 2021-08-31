@@ -1,0 +1,9 @@
+[lab_ansible]
+192.168.0.109
+192.168.0.110
+
+[debian2]
+192.168.0.109 nameserver=srv-debian-02
+
+[centos]
+192.168.0.110 nameserver=srv-centos-01
